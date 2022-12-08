@@ -4,10 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>RS Lessons</h1>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="#" class="menu_link">About me</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Education</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Code</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Projects</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Languages</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#" class="menu_link">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="promo">
+            <img src="./assets/img/me.png" alt="my photo" class="promo_photo">
+            <h1 class="title promo_title">hi , I am Eugeniy</h1>
+            <div class="promo_content">
+                <img src="./assets/img/vasilich.png" alt="ivan vasilich" class="promo_img">
+                <div class="promo_descr">
+                    <p class="descr">this is how my relatives see me.they are deeply convinced that I specially get up early, so as not to do anything for a long time.</p>
+                    <p class="descr">In the meantime, I'm studying web development.</p>
+                </div>
+            </div>
+        </section>
+        <section class="education">
+            <h2 class="title education_title">my education</h2>
+            <p class="descr subtitle">I am a construction technician by education, but I decided to change my field of activity</p>
+            <div class="education_descr">
+                <p class="descr">I took a professional retraining course in the specialty: development and programming of websites.</p>
+                <h3 class="title">when developing, I can use:</h3>
+                <div class="education_skills">
+                    <div class="skill_item">
+                        <img src="./assets/icons/html5.svg" alt="html logo" class="skill_logo">
+                        <p class="skill_title title">html 5</p>
+                        <p class="skill_descr descr">It is he who creates the framework of your website or application, and the fifth version will allow me to create a more SEO-optimized structure of your product</p>
+                    </div>
+                    <div class="skill_item">
+                        <img src="./assets/icons/css3.svg" alt="css logo" class="skill_logo">
+                        <p class="skill_title title">css</p>
+                        <p class="skill_descr descr">This style language allows me to create absolutely any appearance of your website or application. Everything is limited only by your imagination!</p>
+                    </div>
+                    <div class="skill_item">
+                        <img src="./assets/icons/sass.svg" alt="sass logo" class="skill_logo">
+                        <p class="skill_title title">sass</p>
+                        <p class="skill_descr descr">This is a css language preprocessor that allows you to optimize the development of styles for a product</p>
+                    </div>
+                    <div class="skill_item">
+                        <img src="./assets/icons/JS.svg" alt="java-script logo" class="skill_logo">
+                        <p class="skill_title title">java script</p>
+                        <p class="skill_descr descr">This programming language allows you to animate anything: sliders, windows, tooltips, tabs, getting data from the server and much more</p>
+                    </div>
+                </div>
+                <p class="descr">I am currently taking a course <span>' js/fe pre-scool 2022q4 '</span> in The <a href="https://rs.school/" class="descr">Rolling Scopes School</a></p>
+            </div>
+        </section>
+        <section class="code">
+            <h2 class="title">an example of solving a task from the codewars resource:</h2>
+            <pre class="pre">
+                <code class="sample_code">
+                    <span class="command">function</span><span class="name"> solution</span>(<span class="name">number</span>) {
+                        <span class="command">let </span><span class="name">result </span>= <span class="name">0</span>;
+                        <span class="command">if</span>(<span class="answer">number </span>< <span class="name">0</span>) {
+                        <span class="command">return </span><span class="answer">result</span>;
+                        }
+                        <span class="command">for</span>(<span class="command">let </span><span class="name">i </span>= <span class="name">0</span>;<span> i </span>< <span class="answer">number</span>; <span class="answer">i</span>++) {
+                            <span class="command">if</span>(<span class="answer">i </span>% <span class="name">3 </span>=== <span class="name">0 </span>|| <span class="answer">i </span>% <span class="name">5 </span>=== <span class="name">0</span>) {
+                                <span class="answer">result </span>+= <span class="answer">i</span>;
+                            }
+                        }
+                        <span class="command">return </span><span class="answer">result</span>;
+                    }
+                </code>
+            </pre>
+        </section>
+    </main>
 </body>
 </html>

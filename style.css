@@ -1,3 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 * {
     box-sizing: border-box;
+    font-family: 'Zen Dots', cursive;
+}
+body {
+    background: url('./assets/img/matrix.gif');
+}
+.header {
+    position: relative;
+    height: 50px;
+}
+.nav {
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    background: linear-gradient(1deg, #3b960d, #1d077f);
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 70px;
+    padding: 13px 70px;
+    list-style: none;
+}
+.menu .menu_link {
+    text-decoration: none;
+    color: #ffffff;
+}
+.menu .menu_link:hover {
+    color: #d13232;
+}
+.container {
+    margin: 0 auto;
+    width: 95vw;
+    border-top: 1px solid transparent;
+    box-shadow: 0px 0px 30px 20px #07361f;
+    background-color: black;
+    opacity: 0.8;
+}
+.title {
+    text-transform: uppercase;
+    color :#ffffff;
+    text-align: center;
+    text-shadow: #5dc8e5 1px 1px 0, #5dc8e5 2px 2px 0, 
+                 #5dc8e5 3px 3px 0, #5dc8e5 4px 4px 0, 
+                 #5dc8e5 5px 5px 0;
+}
+.descr {
+    font-family: 'Nerko One', cursive;
+    text-transform: uppercase;
+    color :#d1dcf5;
+    font-size: 1.5rem;
+}
+.descr span {
+    text-shadow: #eb5050  1px 1px 0, #eb5050  2px 2px 0, 
+                 #eb5050  3px 3px 0, #eb5050  4px 4px 0, 
+                 #eb5050  5px 5px 0;
+}
+.descr a:hover {
+    color: #d13232;
+}
+.subtitle {
+    text-align: center;
+    font-size: 2rem;
+}
+.promo {
+    min-height: 90vh;
+}
+.promo_photo {
+    display: block;
+    margin: 40px auto;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 30px 20px #07361f;
+}
+.promo_title {  
+    font-size: 2.5rem;
+}
+.promo_content{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.promo_img {
+    width: 80%;
+    box-shadow: 0px 0px 30px 20px #07361f;
+}
+.promo_descr {
+    width: 40%;
+    margin: 60px;
+    line-height: 50px;
+}
+.education {
+    min-height: 95vh;
+}
+.education_title {
+    font-size: 2rem;
+}
+.education_descr {
+    margin: 0 100px;
+    text-align: center;
+    line-height: 50px;
+}
+.education_skills {
+    width: 100%;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.skill_item {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid green;
+    box-shadow: 0px 0px 30px 20px #07361f;
+}
+.skill_item:hover {
+    scale: 1.2;
+}
+.skill_descr {
+    font-size: 0.8rem;
+}
+.code {
+    margin-top: 80px;
+}
+.pre {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+}
+.sample_code {
+    color:#ffffff;
+}
+.command {
+    color: #b294bb;
+}
+.name {
+    color: #de935f;
+}
+.answer {
+    color: #89b6c5;
 }
