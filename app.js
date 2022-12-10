@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderDots.classList.add('slider_dots');
     sliderWrapper.append(sliderDots);
 
-    for(let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         const dot = document.createElement('li');
         dot.setAttribute('data-slide-to', i);
         dot.classList.add('dot');
-        if(i === 0) {
+        if (i === 0) {
             dot.classList.add('dot_active');
         }
         sliderDots.append(dot);
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         width = sliderWrapper.offsetWidth;
         sliderMain.style.width = width * slideImg.length + 'px';
-        
+
         slideImg.forEach(img => {
             img.style.width = width + 'px';
             img.style.height = 'auto';
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showSlides(index) {
-        if(index > slides.length - 1) {
+        if (index > slides.length - 1) {
             slideIndex = 0;
         }
-        if(index < 0) {
+        if (index < 0) {
             slideIndex = slides.length - 1;
         }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach(dot => {
         dot.addEventListener('click', (e) => {
             const slideTo = +e.target.getAttribute('data-slide-to');
-            if(slideTo > slideIndex) {
+            if (slideTo > slideIndex) {
                 slides[slideTo].classList.remove('slide-left')
                 slides[slideTo].classList.add('slide-right');
             } else {
@@ -82,11 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function activateAnimation() {
-        paused = setInterval(function() {
-                plusSlides(1);
-                slides[slideIndex].classList.remove('slide-left');
-                slides[slideIndex].classList.add('slide-right');
-            }, 3000);
+        paused = setInterval(function () {
+            plusSlides(1);
+            slides[slideIndex].classList.remove('slide-left');
+            slides[slideIndex].classList.add('slide-right');
+        }, 3000);
     }
 
     activateAnimation();
@@ -102,4 +102,35 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', init);
     showSlides(slideIndex);
     init();
+
+    // Scroll
+    const upBtn = document.querySelector('.pageup');
+    window.addEventListener('scroll', () => {
+        if(window.pageYOffset > 1300) {
+            upBtn.style.display = 'block';
+        } else {
+            upBtn.style.display = 'none';
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            let href = this.getAttribute('href').substring(1);
+    
+            const scrollTarget = document.getElementById(href);
+    
+            const topOffset = document.querySelector('.header').offsetHeight;
+            // const topOffset = 0; // если не нужен отступ сверху 
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - topOffset;
+    
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
 });
