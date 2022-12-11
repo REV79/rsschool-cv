@@ -133,4 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    //Hamburger
+    const menu = document.querySelector('.menu');
+    const hamburger = document.querySelector('.hamburger');
+
+    function toggleClass() {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active')
+    }
+
+    hamburger.addEventListener('click', toggleClass);
+    menu.addEventListener('click', (e) => {
+        if(e.target.classList.contains('menu_link')) {
+            toggleClass();
+        }
+    });
 });
