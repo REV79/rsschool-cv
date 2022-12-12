@@ -1,1 +1,7 @@
-https://REV79.github.io/rsschool-cv/
+<<<<<<< HEAD
+#  rsschool-cv
+||||||| ffa7339
+# rsschool-cv
+=======
+#  rsschool-cv
+>>>>>>> main
